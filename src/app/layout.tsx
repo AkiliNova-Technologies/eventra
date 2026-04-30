@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "Eventra",
   ],
 
-  authors: [{ name: "Eventra" }],
-  creator: "Eventra",
-  publisher: "Eventra",
+  authors: [{ name: "AkiliNova Technologies" }],
+  creator: "AkiliNova Technologies",
+  publisher: "AkiliNova Technologies",
   applicationName: "Eventra",
 
   openGraph: {
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
     url: "https://akili-eventra.vercel.app",
     siteName: "Eventra",
     images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Eventra event management SaaS dashboard",
-      },
-    ],
+  {
+    url: "/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Eventra event management platform",
+  },
+],
     locale: "en_US",
     type: "website",
   },
@@ -63,12 +63,11 @@ export const metadata: Metadata = {
     title: "Eventra | Event Management SaaS Platform",
     description:
       "All-in-one platform for event organizers to create, manage, sell tickets, and track revenue.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
 
   icons: {
     icon: [
-      { url: "/favicon.ico" },
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
