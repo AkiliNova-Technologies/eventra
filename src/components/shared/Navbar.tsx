@@ -1,9 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const navItems = [
   { label: "Explore", href: "/" },
@@ -36,12 +45,11 @@ export function Navbar() {
               href={item.href}
               className={clsx(
                 "relative text-sm font-medium transition-colors",
-                active ? "text-white" : "text-slate-400 hover:text-white",
+                active ? "text-white" : "text-slate-400 hover:text-white"
               )}
             >
               {item.label}
 
-              {/* Active underline */}
               {active && (
                 <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-violet-400" />
               )}
@@ -50,22 +58,81 @@ export function Navbar() {
         })}
       </nav>
 
-      <div className="flex items-center gap-3">
+      <div className="hidden items-center gap-3 md:flex">
         <Button
           asChild
           variant="ghost"
-          className="h-11 px-4 text-slate-400 hover:text-white hover:bg-white/10"
+          className="h-11 px-4 text-slate-400 hover:bg-white/10 hover:text-white"
         >
           <Link href="/login">Log In</Link>
         </Button>
 
         <Button
           asChild
-          className="bg-violet-500 h-11 px-8 text-white hover:bg-violet-700!"
+          className="h-11 bg-violet-500 px-8 text-white hover:bg-violet-700!"
         >
           <Link href="/signup">Sign Up</Link>
         </Button>
       </div>
+
+      <Sheet>
+        <SheetTrigger asChild>
+          <button className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-white/10 bg-white/[0.03] text-white transition hover:bg-white/10 md:hidden">
+            <MenuIcon className="h-5 w-5" />
+          </button>
+        </SheetTrigger>
+
+        <SheetContent
+          side="right"
+          className="w-80 border-white/10 bg-[#0d141d] p-0 text-white"
+        >
+          <SheetHeader className="border-b border-white/10 px-6 py-6 text-left">
+            <SheetTitle className="text-2xl font-bold tracking-tight text-white">
+              Eventra
+            </SheetTitle>
+          </SheetHeader>
+
+          <div className="flex h-full flex-col justify-between px-6 py-6">
+            <nav className="space-y-2">
+              {navItems.map((item) => {
+                const active = isActive(item.href);
+
+                return (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className={clsx(
+                      "flex rounded-sm px-4 py-3 text-sm font-medium transition",
+                      active
+                        ? "bg-violet-500/15 text-violet-200"
+                        : "text-slate-400 hover:bg-white/5 hover:text-white"
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            <div className="space-y-3 border-t border-white/10 pt-6">
+              <Button
+                asChild
+                variant="outline"
+                className="h-11 w-full border-white/10 bg-transparent text-slate-300 hover:bg-white/10 hover:text-white"
+              >
+                <Link href="/login">Log In</Link>
+              </Button>
+
+              <Button
+                asChild
+                className="h-11 w-full bg-violet-500 text-white hover:bg-violet-700!"
+              >
+                <Link href="/signup">Sign Up</Link>
+              </Button>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
     </header>
   );
 }

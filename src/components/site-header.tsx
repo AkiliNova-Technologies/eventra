@@ -139,7 +139,7 @@ export function SiteHeader() {
 
             <PopoverContent
               align="start"
-              className="w-106 border-white/10 bg-[#0B0F14] p-0 text-white shadow-2xl mt-5 mr-4"
+              className="min-w-96 sm:w-96 md:w-100 lg:w-106 border-white/10 bg-[#0B0F14] p-0 text-white shadow-2xl mt-5 mx-4 sm:mx-4 lg:mr-4"
             >
               <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
                 <div>

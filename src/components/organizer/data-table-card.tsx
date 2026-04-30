@@ -92,7 +92,7 @@ export function DataTableCard<T>({
         )}
       </CardHeader>
 
-      <CardContent className="px-8">
+      <CardContent>
         <div className="overflow-x-auto">
           <Table>
             <TableHeader className="bg-[#0d141d]/60">

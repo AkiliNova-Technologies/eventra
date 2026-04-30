@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eventra.vercel.app"),
+  metadataBase: new URL("https://akili-eventra.vercel.app"),
 
   title: {
     default: "Eventra | Event Management SaaS Platform",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Eventra | Event Management SaaS Platform",
     description:
       "Create events, sell tickets, track revenue, and manage attendees from one powerful SaaS dashboard.",
-    url: "https://eventra.vercel.app",
+    url: "https://akili-eventra.vercel.app",
     siteName: "Eventra",
     images: [
       {
