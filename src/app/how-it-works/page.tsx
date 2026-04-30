@@ -77,14 +77,14 @@ export default function HowItWorksPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Button asChild className="h-11 px-8 bg-violet-500 hover:bg-violet-400!">
+              <Button asChild className="h-11 px-8 bg-violet-500 hover:bg-violet-400! rounded-sm">
                 <Link href="/events">Explore Events</Link>
               </Button>
 
               <Button
                 asChild
                 variant="outline"
-                className="h-11 px-8 border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                className="h-11 px-8 border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-sm"
               >
                 <Link href="/organizers">For Organizers</Link>
               </Button>
@@ -147,7 +147,7 @@ export default function HowItWorksPage() {
 
             <Card className="border-white/10 bg-white/[0.04] text-white backdrop-blur-xl">
               <CardContent className="p-6">
-                <div className="rounded-2xl border border-white/10 bg-[#0d141d] p-5">
+                <div className="rounded-lg border border-white/10 bg-[#0d141d] p-5">
                   <div className="flex items-center justify-between border-b border-white/10 pb-4">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-violet-300">

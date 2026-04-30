@@ -83,7 +83,7 @@ export default function OrganizersPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button asChild className="h-11 px-8 bg-violet-500 hover:bg-violet-400!">
+              <Button asChild className="h-11 px-8 bg-violet-500 hover:bg-violet-400! rounded-sm">
                 <Link href="/organizer/dashboard">
                   View Dashboard Demo
                 </Link>
@@ -92,7 +92,7 @@ export default function OrganizersPage() {
               <Button
                 asChild
                 variant="outline"
-                className="h-11 px-8 border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+                className="h-11 px-8 border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white rounded-sm"
               >
                 <Link href="/events">Explore Events</Link>
               </Button>
@@ -279,7 +279,7 @@ export default function OrganizersPage() {
             tickets, revenue, attendees, and event performance.
           </p>
 
-          <Button asChild className="mt-8 h-11 px-8 bg-violet-500 hover:bg-violet-400!">
+          <Button asChild className="mt-8 h-11 px-8 bg-violet-500 hover:bg-violet-400! rounded-sm">
             <Link href="/organizer/dashboard">
               Open Dashboard Demo
             </Link>

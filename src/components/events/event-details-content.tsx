@@ -29,10 +29,11 @@ export function EventDetailsContent({ event }: { event: EventItem }) {
   const total = moneyToNumber(selectedTicket.price) * quantity;
 
   const checkoutHref = `/checkout?event=${event.id}&ticket=${encodeURIComponent(
-    selectedTicket.name
-  )}&quantity=${quantity}&total=${total}`;
+    selectedTicket.name,
+  )}&quantity=${quantity}`;
 
-  const peopleLabel = event.category === "Music" ? "Performers" : "Keynote Speakers";
+  const peopleLabel =
+    event.category === "Music" ? "Performers" : "Keynote Speakers";
 
   return (
     <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-3 lg:px-8">

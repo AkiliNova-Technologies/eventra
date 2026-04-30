@@ -77,7 +77,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="h-11 bg-violet-500 px-8 hover:bg-violet-400"
+              className="h-11 bg-violet-500 px-8 hover:bg-violet-400 rounded-sm"
             >
               <Link href="/events">Explore Events</Link>
             </Button>
@@ -86,7 +86,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="h-11 border-white/10 bg-white/5 px-8 text-white hover:bg-white/10"
+              className="h-11 border-white/10 bg-white/5 px-8 text-white hover:bg-white/10 hover:text-white rounded-sm"
             >
               <Link href="/organizers">Become an Organizer</Link>
             </Button>
